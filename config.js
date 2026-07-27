@@ -1,377 +1,292 @@
 /**
- * Site Configuration
- * Centralized content management for easy updates
+ * Growth Teams — Site Configuration
+ * All website content is managed here.
+ * Brand: Growth Teams | Domain: growthteams.in
  */
 
 const SITE_CONFIG = {
-  // Theme Settings
-  theme: {
-    default: "dark", // "dark" or "light"
-    storageKey: "growth-team-theme",
+
+  // ── Brand ─────────────────────────────────────────────
+  brand: {
+    name: "Growth Teams",
+    tagline: "Custom Software. International Standards.",
+    domain: "growthteams.in",
+    email: "hello@growthteams.in",
+    phone: "+91 9135086955",
+    location: "India",
+    founded: "2026",
   },
 
-  // WhatsApp Settings
+  // ── WhatsApp ───────────────────────────────────────────
   whatsapp: {
     enabled: true,
-    number: "919135086955", // Without + sign
-    message: "Hi! I'm interested in learning more about your Business Operating Systems.",
+    number: "919135086955",
+    message: "Hi! I'd like to discuss a software project with Growth Teams.",
   },
 
-  // Contact Form Settings (Web3Forms - FREE, no backend needed)
-  // Get your access key at: https://web3forms.com (free tier: 250 submissions/month)
+  // ── Contact Form (Web3Forms) ───────────────────────────
   contactForm: {
     enabled: true,
-    accessKey: "71a17c66-76e0-4520-9d5e-cf9e3f0dd867", // Replace with your Web3Forms access key
-    successMessage: "Thank you! We'll get back to you within 24 hours.",
-    errorMessage: "Oops! Something went wrong. Please try again or email us directly.",
+    accessKey: "71a17c66-76e0-4520-9d5e-cf9e3f0dd867",
+    successMessage: "Thank you. We will respond within one business day.",
+    errorMessage: "Something went wrong. Please email us at hello@growthteams.in",
   },
 
-  // Brand
-  brand: {
-    name: "Growth Team",
-    tagline: "Business Operating Systems",
-    subtitle: "Mobile-First. Multi-Role. Built for Real Operations.",
-    email: "kumod353@gmail.com",
-    phone: "+91 9135086955",
-  },
-
-  // Navigation
+  // ── Navigation ─────────────────────────────────────────
   nav: [
-    { label: "Problem", href: "#problem" },
-    { label: "Solutions", href: "#solutions" },
-    { label: "Architecture", href: "#architecture" },
-    { label: "Products", href: "#products" },
+    { label: "Services", href: "#services" },
+    { label: "Work", href: "#work" },
+    { label: "Process", href: "#process" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "#about" },
   ],
 
-  // Hero Section
+  // ── Hero ───────────────────────────────────────────────
   hero: {
-    headline: "Business Operating Systems",
-    subheadline: "Mobile-First. Multi-Role. Built for Real Operations.",
-    description: "We design and build custom business operating systems for companies where day-to-day execution actually matters.",
-    ctaPrimary: "Let's Talk",
-    ctaSecondary: "See How It Works",
+    eyebrow: "Software Development Studio — India",
+    headline: "We build software\nthat scales your business.",
+    subheadline: "Growth Teams partners with operational companies in the US, Europe, Australia, and the Middle East to deliver custom software — on time, to spec, every time.",
+    ctaPrimary: "Start a Project",
+    ctaSecondary: "See Our Work",
+    stats: [
+      { value: "3+", label: "Systems Delivered" },
+      { value: "2", label: "Countries Served" },
+      { value: "45", label: "Day Core Delivery" },
+    ],
   },
 
-  // Problems We Solve
-  problems: {
-    title: "The Business Reality We Fix",
-    subtitle: "Most operational businesses struggle with:",
+  // ── Services ───────────────────────────────────────────
+  services: {
+    eyebrow: "What We Build",
+    headline: "End-to-end software for operational businesses.",
+    subtitle: "We build systems that replace manual processes, reduce people-dependency, and give your business real-time visibility.",
     items: [
-      {
-        icon: "💬",
-        title: "WhatsApp Coordination",
-        description: "Critical business data scattered across chat groups",
-      },
-      {
-        icon: "📊",
-        title: "Excel & Spreadsheets",
-        description: "Manual tracking that breaks at scale",
-      },
-      {
-        icon: "🔌",
-        title: "Disconnected CRMs",
-        description: "Tools that don't talk to each other",
-      },
-      {
-        icon: "⏰",
-        title: "Manual Follow-ups",
-        description: "Revenue leaking through the cracks",
-      },
-      {
-        icon: "🧩",
-        title: "Fragmented Tools",
-        description: "No single source of truth",
-      },
-      {
-        icon: "👤",
-        title: "People Dependency",
-        description: "Business stops when key people are unavailable",
-      },
-    ],
-    result: {
-      title: "This results in:",
-      items: [
-        "Revenue leakage and missed opportunities",
-        "Inefficiency at scale",
-        "Poor accountability",
-        "Growth that creates chaos instead of leverage",
-      ],
-    },
-  },
-
-  // Who This Is For
-  industries: {
-    title: "Who This Is For",
-    subtitle: "Built for businesses that operate with people + processes",
-    items: [
-      { icon: "🚛", name: "Fleet & Logistics" },
-      { icon: "📦", name: "Delivery & Last-Mile" },
-      { icon: "🍽️", name: "Restaurants & Food Chains" },
-      { icon: "🏢", name: "Real Estate & Brokerages" },
-      { icon: "🎓", name: "Coaching & Training Centers" },
-      { icon: "🏥", name: "Clinics & Healthcare" },
-      { icon: "🔧", name: "Service-Based Businesses" },
-      { icon: "📈", name: "CRM-Heavy Organizations" },
-      { icon: "🏪", name: "Multi-Branch Companies" },
-    ],
-    idealClient: {
-      title: "Ideal Client Fit",
-      traits: [
-        "Values structure over shortcuts",
-        "Thinks long-term, not quick fixes",
-        "Prefers quality over cheapest option",
-        "Thinks in systems, not patches",
-      ],
-    },
-  },
-
-  // Philosophy
-  philosophy: {
-    title: "Our Philosophy",
-    quote: "We don't build apps.",
-    emphasis: "We build business operating systems.",
-    pillars: [
-      { icon: "🏗️", title: "Create Structure", description: "Organized workflows that scale" },
-      { icon: "✅", title: "Enforce Accountability", description: "Clear ownership at every step" },
-      { icon: "🔗", title: "Connect Sales & Operations", description: "One unified system" },
-      { icon: "👁️", title: "Real-Time Visibility", description: "See everything as it happens" },
-      { icon: "🎯", title: "Support Better Decisions", description: "Data-driven insights" },
-    ],
-    footer: "The system adapts to how your business actually works—not the other way around.",
-  },
-
-  // System Architecture
-  architecture: {
-    title: "System Architecture",
-    subtitle: "Proven & Repeatable. Customized to Your Workflows.",
-    layers: [
-      {
-        id: "core",
-        badge: "MANDATORY",
-        badgeColor: "cyan",
-        title: "Core Operational Layer",
-        description: "This is the foundation. It runs sales, operations, and execution in one system.",
-        features: [
-          "Role-based access (Admin / Staff / Agent / User)",
-          "Lead, booking, order, task lifecycle management",
-          "Clear ownership and status tracking",
-          "Follow-ups, reminders, and escalations",
-          "File uploads (documents, proofs, receipts)",
-          "Notifications and alerts",
-          "Secure authentication and permissions",
-        ],
-        replaces: ["Standalone CRMs", "Manual follow-ups", "Spreadsheets and chat coordination"],
-      },
-      {
-        id: "analytics",
-        badge: "DEFAULT",
-        badgeColor: "green",
-        title: "Analytics & Visibility Layer",
-        description: "This layer turns activity into clarity.",
-        features: [
-          "Real-time dashboards",
-          "Key performance indicators (KPIs)",
-          "Custom reports",
-          "Trend analysis",
-          "Rule-based alerts",
-        ],
-        examples: [
-          "Performance by staff, agent, branch, or location",
-          "Lead-to-conversion visibility",
-          "Cost vs output comparisons",
-          "Delay and inefficiency patterns",
-        ],
-      },
-      {
-        id: "intelligence",
-        badge: "OPTIONAL",
-        badgeColor: "purple",
-        title: "Intelligence Layer",
-        description: "Added once meaningful data exists. A strong competitive advantage.",
-        features: [
-          "Anomaly detection",
-          "Early warning signals",
-          "Demand or workload forecasting",
-          "Risk and performance indicators",
-        ],
-        purpose: [
-          "Highlight what needs attention",
-          "Predict issues before they escalate",
-          "Support faster, smarter decisions",
-        ],
-      },
-    ],
-  },
-
-  // Devices
-  devices: {
-    title: "Mobile-First, Device-Everywhere",
-    subtitle: "Operations happen on the ground. That's why everything is mobile-first by design.",
-    platforms: [
-      { icon: "📱", name: "Mobile" },
-      { icon: "📱", name: "Tablet" },
-      { icon: "💻", name: "Web" },
-      { icon: "🖥️", name: "Desktop" },
-      { icon: "📱", name: "iOS" },
-      { icon: "📱", name: "Android" },
-    ],
-    tagline: "One system. All devices. No duplication. No fragmentation.",
-  },
-
-  // Process
-  process: {
-    title: "End-to-End Delivery",
-    subtitle: "Zero Client Burden",
-    steps: [
       {
         number: "01",
-        title: "You Explain",
-        description: "Share your business, pain points, and workflows",
-        side: "you",
+        title: "Mobile Applications",
+        description: "Native iOS and Android apps built with Flutter. One codebase, two platforms, no compromise on performance or offline capability.",
+        tags: ["Flutter", "iOS", "Android", "Offline-first"],
       },
       {
         number: "02",
-        title: "We Analyze",
-        description: "Deep dive into your operations and requirements",
-        side: "we",
+        title: "Business Software Systems",
+        description: "Custom web platforms and internal tools — CRMs, booking systems, ERP, POS, and operational dashboards built exactly to your workflows.",
+        tags: ["React", "Django", "FastAPI", "PostgreSQL"],
       },
       {
         number: "03",
-        title: "We Design",
-        description: "Create the system architecture tailored to you",
-        side: "we",
+        title: "Backend & Cloud Infrastructure",
+        description: "Scalable APIs, databases, and cloud deployments. Your system stays online, secure, and fast as you grow from 10 users to 10,000.",
+        tags: ["AWS", "GCP", "REST APIs", "Docker"],
       },
       {
         number: "04",
-        title: "We Build",
-        description: "Develop all applications, backend, and infrastructure",
-        side: "we",
+        title: "AI-Enhanced Features",
+        description: "Intelligent automation, document processing, and AI-powered insights integrated directly into your existing or new software system.",
+        tags: ["OpenAI", "Computer Vision", "NLP", "Automation"],
       },
       {
         number: "05",
-        title: "We Deploy",
-        description: "Launch and provide ongoing support",
-        side: "we",
+        title: "Workflow Automation",
+        description: "Eliminate the manual, repetitive work that drains your team's time. We identify the bottlenecks in your operations and automate them — approvals, notifications, scheduling, data sync, and reporting — so your team focuses on work that actually requires a human.",
+        tags: ["Zapier-level logic", "Triggered workflows", "Multi-step pipelines", "Scheduled tasks"],
+        useCases: [],
+      },
+      {
+        number: "06",
+        title: "AI Agents",
+        description: "Purpose-built AI agents that work inside your business operations — not generic chatbots, but trained, context-aware agents that take real actions on your behalf.",
+        tags: ["LLM-powered", "Tool-use", "Context-aware", "Multi-agent systems"],
+        useCases: [
+          {
+            label: "Sales Follow-up Agent",
+            detail: "Reads your CRM, identifies leads with no activity in 5+ days, drafts personalised follow-up emails, and flags high-priority deals for human review.",
+          },
+          {
+            label: "Document Processing Agent",
+            detail: "Extracts structured data from invoices, contracts, or delivery receipts — feeds it directly into your system without manual data entry.",
+          },
+          {
+            label: "Support Triage Agent",
+            detail: "Classifies inbound support requests by urgency and category, auto-resolves common queries, and routes the rest to the right team member.",
+          },
+          {
+            label: "Operations Monitor Agent",
+            detail: "Watches your dashboards for anomalies — late deliveries, low stock, missed targets — and sends actionable alerts before problems escalate.",
+          },
+          {
+            label: "Onboarding Agent",
+            detail: "Guides new staff through onboarding steps, answers process questions from your SOPs, and confirms task completion without manager involvement.",
+          },
+        ],
       },
     ],
-    footer: "You never need to manage technology.",
   },
 
-  // Products
-  products: {
-    title: "Built & Deployed",
-    subtitle: "Systems we've already delivered",
+  // ── About / Story ──────────────────────────────────────
+  about: {
+    eyebrow: "Our Story",
+    headline: "Built from rural India.\nTrusted internationally.",
+    paragraphs: [
+      "Growth Teams was founded on a clear belief: exceptional software does not require an expensive city office. It requires discipline, clear processes, and a team that takes quality personally.",
+      "We are based in rural India, which keeps our costs lean without compromising our standards. Our developers are trained to international benchmarks — clear communication, documented processes, and delivery that matches what was promised.",
+      "Every system we build is designed to last. Not a prototype, not a quick fix — a production-grade platform your business can grow on for years.",
+    ],
+    values: [
+      {
+        title: "Delivery over promises",
+        description: "We commit to timelines and hold ourselves accountable to them.",
+      },
+      {
+        title: "Systems thinking",
+        description: "We build lasting structure, not short-term workarounds.",
+      },
+      {
+        title: "Long-term relationships",
+        description: "Most clients return for Phase 2. That is how we measure success.",
+      },
+      {
+        title: "The rural advantage",
+        description: "Lower overhead. Higher quality. The same international standards.",
+      },
+    ],
+  },
+
+  // ── Process ────────────────────────────────────────────
+  process: {
+    eyebrow: "How We Work",
+    headline: "A structured process. Zero surprises.",
+    subtitle: "You explain your business once. We handle everything from there.",
+    steps: [
+      {
+        number: "01",
+        title: "Discovery",
+        description: "One focused call. We understand your business, workflows, pain points, and goals. No generic questionnaires.",
+        owner: "Together",
+      },
+      {
+        number: "02",
+        title: "Proposal",
+        description: "A detailed scope document with a fixed price, milestone plan, and delivery timeline — delivered within 48 hours.",
+        owner: "Growth Teams",
+      },
+      {
+        number: "03",
+        title: "Build",
+        description: "Fortnightly demos, direct communication, and version-controlled delivery. You see the system being built in real time.",
+        owner: "Growth Teams",
+      },
+      {
+        number: "04",
+        title: "Launch & Support",
+        description: "Full deployment, staff training, and 30 days of post-launch support included in every engagement.",
+        owner: "Growth Teams",
+      },
+    ],
+  },
+
+  // ── Work / Case Studies ────────────────────────────────
+  work: {
+    eyebrow: "Case Studies",
+    headline: "Systems we have built and deployed.",
     items: [
       {
+        id: "pos-saas",
+        category: "Retail Operations",
         name: "POS SAAS",
-        tagline: "Point of Sale System",
-        description: "Complete retail operations platform with inventory, billing, and multi-branch management.",
-        color: "cyan",
-        image: "assets/pos-saas.png", // Replace with your screenshot
+        description: "A complete point-of-sale and inventory management platform for multi-branch retail businesses. Handles billing, stock tracking, staff roles, and real-time analytics across locations.",
+        outcome: "Replaced spreadsheets and manual billing for 3 retail businesses.",
+        color: "navy",
+        image: "assets/pos-saas.png",
       },
       {
+        id: "farm-to-home",
+        category: "Agriculture & Logistics",
         name: "FarmToHome",
-        tagline: "Farm-to-Consumer Platform",
-        description: "End-to-end solution connecting farmers directly to consumers with logistics and ordering.",
-        color: "green",
-        image: "assets/farm-to-home.png", // Replace with your screenshot
+        description: "An end-to-end platform connecting farmers directly to consumers. Handles ordering, logistics coordination, driver tracking, and payment processing.",
+        outcome: "Reduced farm-to-door delivery coordination time by 40%.",
+        color: "forest",
+        image: "assets/farm-to-home.png",
       },
       {
+        id: "fleet360",
+        category: "Fleet Management",
         name: "Fleet360",
-        tagline: "Fleet Management Solution",
-        description: "Real-time tracking, driver management, and operational analytics for fleet businesses.",
-        color: "purple",
-        image: "assets/fleet360.png", // Replace with your screenshot
+        description: "Real-time fleet tracking and driver management system with operational analytics, maintenance scheduling, and client-facing status dashboards.",
+        outcome: "Manages 50+ vehicles across 2 logistics companies.",
+        color: "slate",
+        image: "assets/fleet360.png",
       },
     ],
   },
 
-  // Pricing
+  // ── Pricing ────────────────────────────────────────────
   pricing: {
-    title: "Delivery Model",
-    subtitle: "Clear. Predictable. Balanced.",
-    timeline: {
-      title: "Timeline",
-      items: [
-        { label: "Core System", value: "30–45 days" },
-        { label: "Enhancements", value: "Phased" },
-      ],
-    },
+    eyebrow: "Investment",
+    headline: "Clear pricing. No surprises.",
+    subtitle: "We price on business value and project scope — not hours. Every engagement starts with a fixed-price proposal before any work begins.",
+    tiers: [
+      {
+        name: "Core System",
+        range: "$15,000 – $40,000",
+        timeline: "30 – 45 days",
+        description: "A complete, production-ready software system built to your exact requirements.",
+        includes: [
+          "Requirements analysis and architecture design",
+          "Role-based access and user management",
+          "Core workflow and process automation",
+          "Admin dashboard and reporting",
+          "Deployment on your infrastructure",
+          "30-day post-launch support",
+        ],
+        highlight: false,
+      },
+      {
+        name: "Enterprise System",
+        range: "$40,000 – $80,000",
+        timeline: "60 – 90 days",
+        description: "Multi-module platforms with complex integrations, multi-role workflows, and AI-enhanced features.",
+        includes: [
+          "Everything in Core System",
+          "Advanced analytics and KPI dashboards",
+          "Third-party integrations (payment, ERP, CRM)",
+          "AI and automation feature integration",
+          "Dedicated project manager",
+          "90-day post-launch support",
+        ],
+        highlight: true,
+      },
+    ],
     payment: {
       title: "Payment Structure",
+      subtitle: "Split across three milestones — aligned to delivery, not just time.",
       items: [
         { percentage: 40, label: "At project initiation" },
-        { percentage: 40, label: "After core delivery" },
-        { percentage: 20, label: "At launch" },
+        { percentage: 40, label: "At core delivery milestone" },
+        { percentage: 20, label: "At final launch" },
       ],
     },
-    ranges: {
-      title: "Investment",
-      items: [
-        { label: "Core System", range: "$10,000 – $20,000" },
-        { label: "Intelligence Layer", range: "$3,000 – $7,000" },
-      ],
-      note: "Pricing depends on workflow complexity, number of roles, and operational scale. We price on business value, not hours.",
-    },
+    note: "Not sure which tier fits? Book a free 30-minute discovery call. We will give you an honest scope assessment before any commitment.",
   },
 
-  // Competitive Reality
-  competitive: {
-    title: "Competitive Reality",
-    subtitle: "Your competitors are already moving",
-    theyDo: [
-      "Automating execution",
-      "Centralizing sales and operations",
-      "Reducing dependency on people",
-      "Making faster, data-backed decisions",
-    ],
-    youRisk: [
-      "Leak revenue",
-      "Lose control as teams grow",
-      "React instead of lead",
-    ],
-    youGain: [
-      "Scale without chaos",
-      "Compete with larger players",
-      "Operate with confidence",
-    ],
-  },
-
-  // Technology
-  technology: {
-    title: "Technology Assurance",
-    principles: [
-      { icon: "🛡️", title: "Stability over trends" },
-      { icon: "📈", title: "Scalability over shortcuts" },
-      { icon: "🔧", title: "Maintainability over complexity" },
-    ],
-    ensures: [
-      "Long-term reliability",
-      "Easy future upgrades",
-      "No forced rewrites",
-      "Secure, scalable systems",
-    ],
-    footer: "Technology will never become a liability.",
-  },
-
-  // Contact / CTA
+  // ── Contact ────────────────────────────────────────────
   contact: {
-    title: "Let's Build Your System",
-    subtitle: "We take care of technology, architecture, and execution. You focus on decisions and growth.",
-    cta: "Start the Conversation",
-    footer: "Together, we build systems that scale.",
+    eyebrow: "Get In Touch",
+    headline: "Let's build something together.",
+    subtitle: "Tell us about your project. We respond to every inquiry within one business day.",
+    cta: "Send Message",
+    footer: "Prefer a call? Reach us via WhatsApp.",
   },
 
-  // Footer
+  // ── Footer ─────────────────────────────────────────────
   footer: {
-    copyright: "© 2026 Growth Partner. All rights reserved.",
-    tagline: "Building systems that scale.",
+    tagline: "Custom software for operational businesses.",
+    copyright: "© 2026 Growth Teams. All rights reserved.",
+    location: "Built from rural India.",
   },
 };
 
-// Export for use in other scripts
+// Node.js export (for any tooling/tests)
 if (typeof module !== "undefined" && module.exports) {
   module.exports = SITE_CONFIG;
 }

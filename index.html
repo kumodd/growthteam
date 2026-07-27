@@ -4,360 +4,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growth Team | Business Operating Systems</title>
+  <title>Growth Teams — Custom Software for Operational Businesses</title>
   <meta name="description"
-    content="We design and build custom business operating systems for companies where day-to-day execution actually matters. Mobile-first, multi-role, built for real operations.">
+    content="Growth Teams builds custom software systems for operational businesses in the US, Europe, Australia, and the Middle East. Mobile apps, web platforms, cloud infrastructure — delivered from India to international standards.">
 
-  <!-- SEO Meta Tags -->
+  <!-- SEO -->
   <meta name="keywords"
-    content="business operating systems, mobile-first, CRM, operations management, fleet management, POS, custom software">
-  <meta name="author" content="Growth Team">
+    content="custom software development, business software India, Flutter mobile apps, operational software, CRM development, ERP development">
+  <meta name="author" content="Growth Teams">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://growthteams.in">
 
-  <!-- Open Graph / Social Media -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Growth Team | Business Operating Systems">
+  <meta property="og:title" content="Growth Teams — Custom Software for Operational Businesses">
   <meta property="og:description"
-    content="We design and build custom business operating systems for companies where day-to-day execution actually matters.">
-  <meta property="og:url" content="https://growthteam.com">
+    content="We build custom software systems for operational businesses. Mobile apps, web platforms, cloud infrastructure — delivered to international standards.">
+  <meta property="og:url" content="https://growthteams.in">
+  <meta property="og:image" content="https://growthteams.in/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Growth Teams — Custom Software for Operational Businesses">
+  <meta name="twitter:description"
+    content="We build custom software systems for operational businesses in the US, Europe, Australia, and the Middle East.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Growth Teams",
+    "url": "https://growthteams.in",
+    "description": "Custom software development studio building operational software for international businesses.",
+    "foundingDate": "2026",
+    "foundingLocation": "India",
+    "email": "hello@growthteams.in",
+    "telephone": "+919135086955",
+    "areaServed": ["US", "GB", "AU", "AE", "SG"],
+    "knowsAbout": ["Software Development", "Mobile Applications", "Flutter", "Business Software", "Cloud Infrastructure"]
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2300d4ff' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='%230a0a0f' font-family='system-ui'>GT</text></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231B3A5C' rx='20' width='100' height='100'/><text x='50' y='66' font-size='44' text-anchor='middle' fill='%23ffffff' font-family='Georgia,serif' font-weight='400'>GT</text></svg>">
 </head>
 
 <body>
+
   <!-- Page Loader -->
-  <div class="page-loader">
-    <div class="loader-content">
-      <div class="loader-spinner"></div>
-      <p class="loader-text">Loading...</p>
-    </div>
+  <div class="page-loader" id="page-loader">
+    <div class="loader-mark">GT</div>
   </div>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">
-        <span class="nav-logo-icon">GT</span>
-        <span>Growth Team</span>
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="nav-logo-mark">GT</span>
+        <span class="nav-logo-name">Growth Teams</span>
       </a>
 
-      <ul class="nav-links" id="nav-links-container">
-        <!-- Rendered dynamically from config -->
-      </ul>
+      <ul class="nav-links" id="nav-links-container"></ul>
 
-      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <div class="nav-right">
+        <a href="#contact" class="nav-cta" id="nav-cta">Let's Talk</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+      </div>
+    </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- Mobile Menu -->
+    <div class="nav-mobile" id="nav-mobile">
+      <ul class="nav-mobile-links" id="nav-mobile-links"></ul>
+      <a href="#contact" class="btn btn-primary nav-mobile-cta">Let's Talk</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero bg-grid" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <span class="badge badge-cyan hero-badge">Business Solutions</span>
-      <h1 class="hero-title" id="hero-title">Business Operating Systems</h1>
-      <p class="hero-subtitle" id="hero-subtitle">Mobile-First. Multi-Role. Built for Real Operations.</p>
-      <p class="hero-description" id="hero-description">
-        We design and build custom business operating systems for companies where day-to-day execution actually matters.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg" id="hero-cta-primary">Let's Talk</a>
-        <a href="#architecture" class="btn btn-secondary btn-lg" id="hero-cta-secondary">See How It Works</a>
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="eyebrow" id="hero-eyebrow">Software Development Studio</p>
+        <h1 class="hero-headline" id="hero-title">We build software that scales your business.</h1>
+        <p class="hero-sub" id="hero-subtitle">Growth Teams partners with operational companies in the US, Europe,
+          Australia, and the Middle East to deliver custom software — on time, to spec, every time.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Start a Project</a>
+          <a href="#work" class="btn btn-outline" id="hero-cta-secondary">See Our Work</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="hero-scroll-icon"></div>
-      <span>Scroll to explore</span>
+      <div class="hero-stats" id="hero-stats">
+        <!-- Rendered from config -->
+      </div>
     </div>
   </section>
 
-  <!-- Problems Section -->
-  <section class="section-problems bg-dots" id="problem">
+  <!-- ── Services ──────────────────────────────────────── -->
+  <section class="section-services" id="services">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="badge badge-cyan section-badge">The Challenge</span>
-        <h2 class="section-title" id="problems-title">The Business Reality We Fix</h2>
-        <p class="section-subtitle" id="problems-subtitle">Most operational businesses struggle with:</p>
+        <p class="eyebrow" id="services-eyebrow">What We Build</p>
+        <h2 class="section-headline" id="services-title">End-to-end software for operational businesses.</h2>
+        <p class="section-sub" id="services-subtitle">We build systems that replace manual processes, reduce
+          people-dependency, and give your business real-time visibility.</p>
       </div>
-
-      <div class="problem-grid stagger" id="problems-grid">
-        <!-- Rendered dynamically from config -->
-      </div>
-
-      <div class="problem-result fade-in" id="problems-result">
-        <h3 class="problem-result-title" id="problems-result-title">This results in:</h3>
-        <ul class="problem-result-list" id="problems-result-list">
-          <!-- Rendered dynamically from config -->
-        </ul>
-      </div>
-
-      <div class="problem-divider fade-in">
-        <p class="problem-divider-text">Technology isn't the problem. <span class="highlight">Lack of structure
-            is.</span></p>
+      <div class="services-list" id="services-list">
+        <!-- Rendered from config -->
       </div>
     </div>
   </section>
 
-  <!-- Solutions / Industries Section -->
-  <section class="section-industries" id="solutions">
+  <!-- ── Case Studies ──────────────────────────────────── -->
+  <section class="section-work" id="work">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="badge badge-green section-badge">Who We Serve</span>
-        <h2 class="section-title" id="industries-title">Who This Is For</h2>
-        <p class="section-subtitle" id="industries-subtitle">Built for businesses that operate with people + processes
-        </p>
+        <p class="eyebrow" id="work-eyebrow">Case Studies</p>
+        <h2 class="section-headline" id="work-title">Systems we have built and deployed.</h2>
       </div>
-
-      <div class="industries-grid stagger" id="industries-grid">
-        <!-- Rendered dynamically from config -->
-      </div>
-
-      <div class="ideal-client fade-in">
-        <h3 class="ideal-client-title" id="ideal-client-title">Ideal Client Fit</h3>
-        <ul class="ideal-client-traits" id="ideal-client-traits">
-          <!-- Rendered dynamically from config -->
-        </ul>
+      <div class="work-grid" id="work-grid">
+        <!-- Rendered from config -->
       </div>
     </div>
   </section>
 
-  <!-- Philosophy Section -->
-  <section class="philosophy" id="philosophy">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-purple section-badge">Our Approach</span>
-        <h2 class="section-title" id="philosophy-title">Our Philosophy</h2>
-      </div>
-
-      <div class="philosophy-quote fade-in">
-        <p class="philosophy-quote-text" id="philosophy-quote">We don't build apps.</p>
-        <p class="philosophy-quote-emphasis" id="philosophy-emphasis">We build business operating systems.</p>
-      </div>
-
-      <div class="philosophy-pillars stagger" id="philosophy-pillars">
-        <!-- Rendered dynamically from config -->
-      </div>
-
-      <p class="philosophy-footer fade-in" id="philosophy-footer">
-        The system adapts to how your business actually works—not the other way around.
-      </p>
-    </div>
-  </section>
-
-  <!-- Architecture Section -->
-  <section class="section-architecture bg-dots" id="architecture">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-cyan section-badge">Technical Foundation</span>
-        <h2 class="section-title" id="architecture-title">System Architecture</h2>
-        <p class="section-subtitle" id="architecture-subtitle">Proven & Repeatable. Customized to Your Workflows.</p>
-      </div>
-
-      <div class="architecture-layers" id="architecture-layers">
-        <!-- Rendered dynamically from config -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Devices Section -->
-  <section class="devices" id="devices">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-green section-badge">Cross-Platform</span>
-        <h2 class="section-title" id="devices-title">Mobile-First, Device-Everywhere</h2>
-        <p class="section-subtitle" id="devices-subtitle">Operations happen on the ground. That's why everything is
-          mobile-first by design.</p>
-      </div>
-
-      <div class="devices-grid stagger" id="devices-grid">
-        <!-- Rendered dynamically from config -->
-      </div>
-
-      <p class="devices-tagline fade-in" id="devices-tagline">
-        <span class="highlight">One system.</span> All devices. No duplication. No fragmentation.
-      </p>
-    </div>
-  </section>
-
-  <!-- Process Section -->
+  <!-- ── Process ───────────────────────────────────────── -->
   <section class="section-process" id="process">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="badge badge-purple section-badge">How It Works</span>
-        <h2 class="section-title" id="process-title">End-to-End Delivery</h2>
-        <p class="section-subtitle" id="process-subtitle">Zero Client Burden</p>
+        <p class="eyebrow" id="process-eyebrow">How We Work</p>
+        <h2 class="section-headline" id="process-title">A structured process. Zero surprises.</h2>
+        <p class="section-sub" id="process-subtitle">You explain your business once. We handle everything from there.</p>
       </div>
-
-      <div class="process-timeline" id="process-timeline">
-        <!-- Rendered dynamically from config -->
+      <div class="process-steps" id="process-steps">
+        <!-- Rendered from config -->
       </div>
-
-      <p class="process-footer fade-in" id="process-footer">
-        You never need to manage technology.
-      </p>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section class="products" id="products">
+  <!-- ── Pricing ───────────────────────────────────────── -->
+  <section class="section-pricing" id="pricing">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="badge badge-cyan section-badge">Portfolio</span>
-        <h2 class="section-title" id="products-title">Built & Deployed</h2>
-        <p class="section-subtitle" id="products-subtitle">Systems we've already delivered</p>
+        <p class="eyebrow" id="pricing-eyebrow">Investment</p>
+        <h2 class="section-headline" id="pricing-title">Clear pricing. No surprises.</h2>
+        <p class="section-sub" id="pricing-subtitle">We price on business value and scope — not hours. Every engagement
+          starts with a fixed-price proposal before any work begins.</p>
       </div>
-
-      <div class="products-grid stagger" id="products-grid">
-        <!-- Rendered dynamically from config -->
+      <div class="pricing-tiers" id="pricing-tiers">
+        <!-- Rendered from config -->
       </div>
+      <div class="pricing-payment fade-in" id="pricing-payment-section">
+        <!-- Rendered from config -->
+      </div>
+      <p class="pricing-note fade-in" id="pricing-note"></p>
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section class="section-pricing bg-dots" id="pricing">
+  <!-- ── About ─────────────────────────────────────────── -->
+  <section class="section-about" id="about">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-green section-badge">Investment</span>
-        <h2 class="section-title" id="pricing-title">Delivery Model</h2>
-        <p class="section-subtitle" id="pricing-subtitle">Clear. Predictable. Balanced.</p>
-      </div>
-
-      <div class="pricing-grid">
-        <!-- Timeline Card -->
-        <div class="pricing-card fade-in">
-          <h3 class="pricing-card-title">Timeline</h3>
-          <div id="pricing-timeline">
-            <!-- Rendered dynamically from config -->
+      <div class="about-inner">
+        <div class="about-text fade-in">
+          <p class="eyebrow" id="about-eyebrow">Our Story</p>
+          <h2 class="section-headline" id="about-title">Built from rural India. Trusted internationally.</h2>
+          <div class="about-paragraphs" id="about-paragraphs">
+            <!-- Rendered from config -->
           </div>
         </div>
-
-        <!-- Payment Card -->
-        <div class="pricing-card fade-in">
-          <h3 class="pricing-card-title">Payment Structure</h3>
-          <div id="pricing-payment">
-            <!-- Rendered dynamically from config -->
-          </div>
-          <div class="payment-progress">
-            <div class="payment-segment"></div>
-            <div class="payment-segment"></div>
-            <div class="payment-segment"></div>
-          </div>
-        </div>
-
-        <!-- Investment Card -->
-        <div class="pricing-card fade-in">
-          <h3 class="pricing-card-title">Typical Investment</h3>
-          <div id="pricing-investment">
-            <!-- Rendered dynamically from config -->
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing-note fade-in" id="pricing-note">
-        Pricing depends on workflow complexity, number of roles, and operational scale. We price on business value, not
-        hours.
-      </div>
-    </div>
-  </section>
-
-  <!-- Competitive Section -->
-  <section class="section-competitive" id="competitive">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-purple section-badge">Market Reality</span>
-        <h2 class="section-title" id="competitive-title">Competitive Reality</h2>
-        <p class="section-subtitle" id="competitive-subtitle">Your competitors are already moving</p>
-      </div>
-
-      <div class="competitive-grid">
-        <!-- What competitors do -->
-        <div class="competitive-card fade-in">
-          <h3 class="competitive-card-title">Your Competitors Are:</h3>
-          <ul class="competitive-list" id="competitive-they-do">
-            <!-- Rendered dynamically from config -->
-          </ul>
-        </div>
-
-        <!-- Risk of delay -->
-        <div class="competitive-card negative fade-in">
-          <h3 class="competitive-card-title">Businesses That Delay:</h3>
-          <ul class="competitive-list" id="competitive-you-risk">
-            <!-- Rendered dynamically from config -->
-          </ul>
-        </div>
-
-        <!-- What you gain -->
-        <div class="competitive-card positive fade-in">
-          <h3 class="competitive-card-title">This System Prepares You To:</h3>
-          <ul class="competitive-list" id="competitive-you-gain">
-            <!-- Rendered dynamically from config -->
-          </ul>
+        <div class="about-values fade-in" id="about-values">
+          <!-- Rendered from config -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technology Section -->
-  <section class="technology" id="technology">
+  <!-- ── Contact ───────────────────────────────────────── -->
+  <section class="section-contact" id="contact">
     <div class="container">
-      <div class="section-header fade-in">
-        <span class="badge badge-cyan section-badge">Tech Stack</span>
-        <h2 class="section-title" id="technology-title">Technology Assurance</h2>
-      </div>
+      <div class="contact-inner">
+        <div class="contact-header fade-in">
+          <p class="eyebrow" id="contact-eyebrow">Get In Touch</p>
+          <h2 class="section-headline" id="contact-title">Let's build something together.</h2>
+          <p class="section-sub" id="contact-subtitle">Tell us about your project. We respond to every inquiry within
+            one business day.</p>
+        </div>
 
-      <div class="technology-principles stagger" id="technology-principles">
-        <!-- Rendered dynamically from config -->
-      </div>
-
-      <ul class="technology-ensures stagger" id="technology-ensures">
-        <!-- Rendered dynamically from config -->
-      </ul>
-
-      <p class="technology-footer fade-in" id="technology-footer">
-        Technology will never become a liability.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact / CTA Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-content fade-in">
-        <h2 class="contact-title" id="contact-title">Let's Build Your System</h2>
-        <p class="contact-subtitle" id="contact-subtitle">
-          We take care of technology, architecture, and execution. You focus on decisions and growth.
-        </p>
-
-        <!-- Contact Form -->
-        <div class="contact-form-container">
-          <form id="contact-form" class="contact-form">
-            <!-- Web3Forms Access Key (Replace with yours from https://web3forms.com) -->
+        <div class="contact-form-wrap fade-in">
+          <form id="contact-form" class="contact-form" novalidate>
             <input type="hidden" name="access_key" value="71a17c66-76e0-4520-9d5e-cf9e3f0dd867">
-            <input type="hidden" name="subject" value="New Contact from Growth Team Website">
-            <input type="hidden" name="from_name" value="Growth Team Website">
+            <input type="hidden" name="subject" value="New Project Inquiry — growthteams.in">
+            <input type="hidden" name="from_name" value="Growth Teams Website">
 
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="name">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Smith" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="email">Email Address</label>
@@ -365,37 +218,56 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="company">Company / Business</label>
-              <input type="text" id="company" name="company" class="form-input" placeholder="Your Company Name">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="company">Company</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Company Name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="budget">Estimated Budget</label>
+                <select id="budget" name="budget" class="form-input form-select">
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="under-15k">Under $15,000</option>
+                  <option value="15k-40k">$15,000 – $40,000</option>
+                  <option value="40k-80k">$40,000 – $80,000</option>
+                  <option value="80k-plus">$80,000+</option>
+                </select>
+              </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="message">Tell us about your needs</label>
-              <textarea id="message" name="message" class="form-textarea"
-                placeholder="Describe your business, current challenges, and what you're looking to achieve..."
-                required></textarea>
+              <label class="form-label" for="message">Tell us about your project</label>
+              <textarea id="message" name="message" class="form-input form-textarea"
+                placeholder="Describe your business, what you need built, and your timeline..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg form-submit" id="contact-cta">Start the
-              Conversation</button>
-
-            <div id="form-message" class="form-message"></div>
+            <button type="submit" class="btn btn-primary btn-submit" id="contact-cta">Send Message</button>
+            <div id="form-message" class="form-message" role="alert"></div>
           </form>
         </div>
 
-        <p class="contact-footer" id="contact-footer">Together, we build systems that scale.</p>
+        <p class="contact-footer fade-in" id="contact-footer">Prefer a call? Reach us via WhatsApp.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- ── Footer ────────────────────────────────────────── -->
+  <footer class="footer" id="footer">
     <div class="container">
-      <div class="footer-content">
-        <span class="footer-logo" id="footer-logo">Growth Partner</span>
-        <span class="footer-tagline" id="footer-tagline">Building systems that scale.</span>
-        <span class="footer-copyright" id="footer-copyright">© 2026 Growth Partner. All rights reserved.</span>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo" id="footer-logo">Growth Teams</span>
+          <p class="footer-tagline" id="footer-tagline">Custom software for operational businesses.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-links" id="footer-links">
+            <!-- Rendered from config -->
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright" id="footer-copyright">© 2026 Growth Teams. All rights reserved.</span>
+        <span class="footer-location" id="footer-location">Built from rural India.</span>
       </div>
     </div>
   </footer>
@@ -403,6 +275,7 @@
   <!-- Scripts -->
   <script src="config.js"></script>
   <script src="script.js"></script>
+
 </body>
 
 </html>
